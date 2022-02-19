@@ -25,3 +25,18 @@ $(".btn").click(function(){
     checkAnswer(userClickedPattern.length-1);
     
 })
+
+// function for playing sound
+function playSound(name){
+    var audio = new Audio("sounds/" + name + ".mp3");
+    audio.play();
+}
+
+// animation for the buttons
+function animatePress(currentColour){
+    $("#"+currentColour).addClass("pressed");
+    setTimeout(() => {
+        // $("#"+currentColour).removeClass("pressed");
+        document.getElementsByClassName(currentColour)[0].classList.remove("pressed");
+    }, 100);
+}
