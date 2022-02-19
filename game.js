@@ -57,4 +57,34 @@ function nextSequence() {
     playSound(randomChosenColour);
   }
 
-  
+  // Checking answer
+function checkAnswer(currentLevel){
+    if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
+        // console.log("pass");
+
+        if(userClickedPattern.length === gamePattern.length){
+            setTimeout(() => {
+                nextSequence();
+            }, 1000);
+        }
+    }
+    else{
+        playSound("wrong");
+        $("body").addClass("game-over");
+        setTimeout(() => {
+            $("body").removeClass("game-over");
+            // document.getElementsByClassName(currentColour)[0].classList.remove("pressed");
+        }, 200);
+
+        $("#level-title").text("Game Over!! Press Any Key to Restart");
+        startOver();
+    }
+}
+
+// restarting the game
+function startOver(){
+    gamePattern = [];
+    userClickedPattern = [];
+    level = 0;
+    started = false;
+}
