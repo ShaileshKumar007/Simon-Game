@@ -12,3 +12,7 @@ Simon is an electronic game of memory skill invented by Ralph H. Baer and Howard
 3. You have to remember the pattern of the tone and you have to play this tone my memorising the tone pattern.
 4. If you miss any tone then you have to start again from the Level 1.
 5. If you lose then you can restart the game again by pressing any key on keyboard.
+
+## Example:
+
+![simon-game](https://user-images.githubusercontent.com/71178959/156892789-d3980451-cb31-433f-b153-41572e7ca28c.JPG)
